@@ -11,7 +11,8 @@ COPY requirements-docker.txt .
 RUN python -m pip install --upgrade pip \
     && python -m pip install -r requirements-docker.txt
 
-COPY app/ ./app/
+COPY backend/ ./backend/
+COPY frontend/ ./frontend/
 COPY models/ ./models/
 COPY reports/ ./reports/
 

@@ -1,15 +1,8 @@
 
-pandas
-numpy
-scikit-learn
-xgboost
-matplotlib
-seaborn
+# Root requirements.txt — used by Streamlit Community Cloud for frontend/dashboard.py
+# Backend/ML dependencies are in requirements-backend.txt (used by Render)
+
+streamlit==1.65.0
+pandas==3.0.6
+requests==2.34.2
 plotly
-joblib
-shap
-jupyter
-fastapi
-uvicorn[standard]
-pydantic
-pytest
