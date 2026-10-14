@@ -1,0 +1,42 @@
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    environment:
+      PYTHONUNBUFFERED: "1"
+    ports:
+      - "8000:8000"
+    volumes:
+      - prediction_data:/app/data
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: streamlit run app/dashboard.py --server.address=0.0.0.0 --server.port=8501
+    environment:
+      PREDICTIVE_MAINTENANCE_API: http://backend:8000
+      PYTHONUNBUFFERED: "1"
+    ports:
+      - "8501:8501"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  prediction_data:

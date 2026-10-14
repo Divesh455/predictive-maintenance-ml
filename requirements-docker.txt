@@ -1,0 +1,12 @@
+
+numpy==2.5.4
+pandas==3.0.6
+scikit-learn==1.9.1
+xgboost==3.4.1
+joblib
+fastapi
+uvicorn[standard]
+pydantic
+streamlit==1.65.0
+SQLAlchemy==2.1.4
+requests==2.34.2

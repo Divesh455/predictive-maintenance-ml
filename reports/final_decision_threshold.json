@@ -1,0 +1,8 @@
+{
+  "threshold": 0.84,
+  "selection_method": "Highest validation F1-score; ties prefer threshold closest to 0.50",
+  "validation_precision": 0.7959183673469388,
+  "validation_recall": 0.5735294117647058,
+  "validation_f1_score": 0.6666666666666666,
+  "selected_model": "XGBoost"
+}

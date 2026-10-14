@@ -1,0 +1,31 @@
+{
+  "model_name": "XGBoost",
+  "target": "machine_failure",
+  "predictor_columns": [
+    "type",
+    "air_temperature_k",
+    "process_temperature_k",
+    "rotational_speed_rpm",
+    "torque_nm",
+    "tool_wear_min"
+  ],
+  "categorical_features": [
+    "type"
+  ],
+  "numeric_features": [
+    "air_temperature_k",
+    "process_temperature_k",
+    "rotational_speed_rpm",
+    "torque_nm",
+    "tool_wear_min"
+  ],
+  "decision_threshold": 0.84,
+  "random_state": 42,
+  "training_rows": 6000,
+  "validation_rows": 2000,
+  "test_rows": 2000,
+  "cv_folds": 5,
+  "selection_metric": "Mean training cross-validation F1-score",
+  "threshold_selection_metric": "Validation F1-score",
+  "test_metrics_file": "reports/final_test_metrics.json"
+}

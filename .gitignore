@@ -1,0 +1,28 @@
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local datasets and prediction history database
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Git
+.git/
+
+# Generated reports that are not required for inference
+reports/*.png
+reports/*.jpg
+reports/*.csv
+reports/final_test_metrics.json
+reports/final_shap_example.json

@@ -1,0 +1,7 @@
+{
+  "test_row_index": 1391,
+  "actual_machine_failure": 1,
+  "predicted_machine_failure": 1,
+  "predicted_failure_probability": 0.9960197806358337,
+  "decision_threshold": 0.75
+}
