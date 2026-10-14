@@ -17,9 +17,11 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-API_BASE_URL = os.getenv(
-    "PREDICTIVE_MAINTENANCE_API",
-    "http://127.0.0.1:8000",
+# Resolve backend API base URL from Streamlit secrets (Streamlit Cloud) or environment variable or default
+API_BASE_URL = (
+    st.secrets.get("PREDICTIVE_MAINTENANCE_API")
+    if hasattr(st, "secrets") and "PREDICTIVE_MAINTENANCE_API" in st.secrets
+    else os.getenv("PREDICTIVE_MAINTENANCE_API", "http://127.0.0.1:8000")
 ).rstrip("/")
 
 # =========================================================
