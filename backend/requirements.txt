@@ -1,0 +1,16 @@
+# backend/requirements.txt
+# ─────────────────────────────────────────────
+# Used by Render.com to install backend deps.
+# Build Command: pip install -r backend/requirements.txt
+# Start Command: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+
+numpy==2.5.4
+pandas==3.0.6
+scikit-learn==1.9.1
+xgboost==3.4.1
+joblib
+fastapi
+uvicorn[standard]
+pydantic
+SQLAlchemy==2.1.4
+psycopg2-binary

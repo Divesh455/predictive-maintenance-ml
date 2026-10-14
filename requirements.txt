@@ -1,8 +1,36 @@
+# requirements.txt — LOCAL DEVELOPMENT ONLY
+# ─────────────────────────────────────────────────────────────
+# Install everything needed to run both backend and frontend locally.
+#
+# Cloud deployments use their own requirements:
+#   Backend  → Render:           backend/requirements.txt
+#   Frontend → Streamlit Cloud:  frontend/requirements.txt
+# ─────────────────────────────────────────────────────────────
 
-# Root requirements.txt — used by Streamlit Community Cloud for frontend/dashboard.py
-# Backend/ML dependencies are in requirements-backend.txt (used by Render)
-
-streamlit==1.65.0
+# ML & Data
+numpy==2.5.4
 pandas==3.0.6
-requests==2.34.2
+scikit-learn==1.9.1
+xgboost==3.4.1
+joblib
+shap
+imbalanced-learn
+
+# Visualization
+matplotlib
+seaborn
 plotly
+
+# API
+fastapi
+uvicorn[standard]
+pydantic
+SQLAlchemy==2.1.4
+requests==2.34.2
+
+# Frontend UI
+streamlit==1.65.0
+
+# Notebooks & Dev tools
+jupyter
+pytest

@@ -1,0 +1,10 @@
+# frontend/requirements.txt
+# ─────────────────────────────────────────────
+# Used by Streamlit Community Cloud.
+# Streamlit Cloud auto-detects this file when it sits
+# in the same directory as the main app file (dashboard.py).
+
+streamlit==1.65.0
+pandas==3.0.6
+requests==2.34.2
+plotly
