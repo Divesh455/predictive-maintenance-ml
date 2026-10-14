@@ -8,3 +8,4 @@ uvicorn[standard]
 pydantic
 SQLAlchemy==2.1.4
 psycopg2-binary
+psycopg
