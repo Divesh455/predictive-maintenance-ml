@@ -1,0 +1,8 @@
+{
+  "model": "XGBoost",
+  "test_row_index": 1391,
+  "actual_failure": 1,
+  "predicted_failure": 1,
+  "failure_probability": 0.9916605353355408,
+  "decision_threshold": 0.84
+}

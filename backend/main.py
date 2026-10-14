@@ -74,8 +74,12 @@ try:
     with open(METADATA_PATH, encoding="utf-8") as file:
         metadata = json.load(file)
 
-    with open(METRICS_PATH, encoding="utf-8") as file:
-        test_metrics = json.load(file)
+    test_metrics = {}
+    if METRICS_PATH.exists():
+        with open(METRICS_PATH, encoding="utf-8") as file:
+            test_metrics = json.load(file)
+    else:
+        logger.warning("Metrics file not found at %s. Using empty defaults.", METRICS_PATH)
 
     threshold = float(threshold_config["threshold"])
 

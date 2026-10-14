@@ -24,5 +24,3 @@ data/
 reports/*.png
 reports/*.jpg
 reports/*.csv
-reports/final_test_metrics.json
-reports/final_shap_example.json
